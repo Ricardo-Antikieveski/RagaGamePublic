@@ -1,4 +1,4 @@
-# 🎮 Raga Engine
+# 🎮 RagaEngine
 
 > 🧱 Uma engine modular de FPS feita em C++ com arquitetura profissional, projetada do zero usando WinAPI e DirectX.
 
@@ -6,7 +6,7 @@
 
 ## 🚀 Visão Geral
 
-A **Raga Engine** é uma engine independente desenvolvida em C++ com foco em performance, modularidade e aprendizado profundo. Inspirada em engines profissionais, seu propósito é construir jogos de tiro em primeira pessoa (FPS) com estrutura de engine própria — sem depender de motores prontos como Unity ou Unreal.
+A Raga Engine é uma engine independente que está sendo desenvolvida em C++ com foco em performance, modularidade e aprendizado profundo. Inspirada em engines profissionais, seu propósito é construir jogos de tiro em primeira pessoa (FPS) com estrutura de engine própria — sem depender de motores prontos como Unity ou Unreal.
 
 ---
 
@@ -35,7 +35,7 @@ A **Raga Engine** é uma engine independente desenvolvida em C++ com foco em per
 
 ## 📸 Imagens
 
-> *(Adicione prints aqui futuramente)*
+> *(Em breve )*
 
 ---
 
@@ -66,9 +66,9 @@ Este repositório serve como vitrine e documentação do progresso da engine.
 
 ## 👤 Autor
 
-**Ricardo Duarte**  
-📧 ricardo@email.com  
-📷 [@ricardo.dev](https://instagram.com/ricardo.dev)  
+**Ricardo Antikieveski**  
+📧 antikieveski.ricardo@gmail.com
+📷 [@_ricardoan](https://www.instagram.com/_ricardoan/)  
 🔒 Projeto pessoal com fins de aprendizado e portfólio
 
 ---
