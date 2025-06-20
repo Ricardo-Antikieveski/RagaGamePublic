@@ -15,71 +15,78 @@ A Raga Engine é uma engine independente que está sendo desenvolvida em C++ com
 - 🔧 **C++**
 - 🖼️ **WinAPI** para criação de janelas e entrada
 - 🎮 Sistema próprio de **input**
-- ⏱️ Gerenciamento de **tempo e deltaTime**
-- 🧩 Arquitetura baseada em **interfaces e injeção de dependência**
+- ⏱️ Gerenciamento de **tempo**, com suporte a **deltaTime**, **FPS**, **pausa** e **time scale**
+- 🧩 Arquitetura baseada em **interfaces puras** e **injeção de dependência**
 - 🔄 Engine em formato **DLL**, com bibliotecas separadas por sistema (`Graphics`, `Input`, `Time`, etc.)
+- 🧪 Visualizador de logs real-time via `OutputDebugString` e `RagaDebugViewer`
 
 ---
 
 ## 🧱 Estrutura Modular
 
-| Módulo      | Descrição                                     |
-|-------------|-----------------------------------------------|
-| `Graphics`  | Criação de janelas, suporte a renderização    |
-| `Input`     | Captura de teclado e mouse via WinAPI         |
-| `Time`      | DeltaTime, FPS, timers escaláveis             |
-| `EngineCore`| Núcleo da engine e gerenciamento dos módulos  |
-| `Game`      | Executável principal que consome a engine     |
+| Módulo        | Descrição                                                    |
+|---------------|--------------------------------------------------------------|
+| `Graphics`    | Criação de janelas (WinAPI), futuro suporte a renderização   |
+| `Input`       | Captura de teclado e mouse via mensagens da WinAPI           |
+| `Time`        | Sistema completo de tempo: deltaTime, FPS, pausa, escala     |
+| `Logger`      | Centralização de logs para debug em tempo real               |
+| `EngineCore`  | Núcleo da engine e gerenciamento dos módulos                 |
+| `Game`        | Executável principal que consome a engine (`.dll`)           |
 
 ---
 
 ## 📸 Imagens
 
-> *(https://drive.google.com/drive/folders/1jjGHlWPCjYo_GG0GlXdX8bBTM902-I7W?usp=sharing)*
+> 📁 [Drive com imagens e progresso](https://drive.google.com/drive/folders/1jjGHlWPCjYo_GG0GlXdX8bBTM902-I7W?usp=sharing)
 
 ---
 
 ## 🔒 Sobre o código
 
 O código-fonte completo está hospedado em repositório privado.  
-Este repositório serve como vitrine e documentação do progresso da engine.
+Este repositório serve como vitrine e documentação pública do progresso da engine.
 
 ---
 
 ## 📍 Status Atual
 
-- ✅ Sistema de Janela (Graphics::Window)
-- ✅ Núcleo funcional da Engine (`EngineCore`)
-- 🚧 Em desenvolvimento: `InputManager`, `Time`, `Renderer`
-- 🧪 Testes e protótipos sendo realizados no módulo `Game`
+- ✅ Sistema de Janela (`Graphics::Window`) completo e redimensionamento bloqueado
+- ✅ `EngineCore` com loop principal, inicialização e shutdown modular
+- ✅ `InputManager` funcional (teclado e mouse via WinAPI)
+- ✅ `TimerManager` com deltaTime, FPS, time scale e pause/resume
+- ✅ Sistema de logs com visualizador auxiliar (`RagaDebugViewer`)
+- 🚧 Em planejamento: sistema de renderização com DirectX
+- 🧪 Testes ativos no módulo `Game` para validação dos subsistemas
 
 ---
 
 ## 📚 Objetivo do projeto
 
 - Aprofundar o conhecimento em **programação de baixo nível**
-- Simular uma engine real de mercado com separação em `.dll` / `.lib` / `.exe`
+- Simular uma engine real de mercado com separação em `.dll`, `.lib`, `.exe`
 - Explorar **design patterns profissionais** no C++
 - Criar um FPS com recursos como lobby, partidas online e loja
+
+---
+
+## 🗓️ Roadmap (curto prazo)
+
+- [x] Sistema de janela com título dinâmico e redimensionamento bloqueado
+- [x] `InputManager` conectado à janela (teclado + mouse)
+- [x] Sistema de tempo completo com pausa e escala (time scale)
+- [x] Sistema de logs com debug viewer em tempo real
+- [ ] Estrutura base do `Renderer` com DirectX
+- [ ] `Game.exe` utilizando exclusivamente a `RagaEngine.dll`
+- [ ] Sistema de cenas e gerenciamento de estados da engine
 
 ---
 
 ## 👤 Autor
 
 **Ricardo Antikieveski**  
-📧 antikieveski.ricardo@gmail.com
+📧 antikieveski.ricardo@gmail.com  
 📷 [@_ricardoan](https://www.instagram.com/_ricardoan/)  
 🔒 Projeto pessoal com fins de aprendizado e portfólio
-
----
-
-## 🗓️ Roadmap (curto prazo)
-
-- [x] Janela criada com suporte a mensagens
-- [ ] Integração do `InputManager`
-- [ ] Sistema de tempo completo com FPS e delta
-- [ ] Começar estrutura do `Renderer` com DirectX
-- [ ] Projeto `Game.exe` usando apenas a `RagaEngine.dll`
 
 ---
 
@@ -87,4 +94,3 @@ Este repositório serve como vitrine e documentação do progresso da engine.
 
 Este projeto está sob licença privada.  
 Para mais informações, entre em contato.
-
